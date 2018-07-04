@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <title> Calculadora IP </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $("button").click(function () {
+                $("#div1").load("texto.html");
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+
+<div id="div1">
+
+    Endereço IP:
+
+    <br><input type="number" name="IP" value="Endereço IP"><br>
+
+    Máscara de rede em contagem de bits:
+
+    <br><input type="number" name="Máscara" value="Máscara de rede "><br>
+
+    <br><input type="submit" value="Submit"></br>
+
+</div>
+
+</body>
+</html>
