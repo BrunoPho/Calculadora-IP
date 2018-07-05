@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
+
     <meta charset="UTF-8">
 
-    <title> Calculadora IP </title>
+      <title> Calculadora ip </title>
+
+    <link href="CSS/estilo.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
+      <script>
 
-        $(document).ready(function() {
-            $("button").click(function () {
-                $("#div1").load("texto.html");
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("dados.php",
+                    {
+                        ip1: $("#ip1").val(),
+                        ip2: $("#ip2").val(),
+                        ip3: $("#ip3").val(),
+                        ip4: $("#ip4").val(),
+                        mansc: $("#masc").val();
+                    }
+
+                    ,function(data){ //data é o conteudo retornado do GET
+                    alert("Data: " + data);
+                });
             });
         });
 
-    </script>
+      </script>
 
 </head>
 <body>
 
-<div id="div1">
+    <div id="div1">
 
-    Endereço IP:
+       Endereço IP: <input type="number" size="3" maxlength="3" name="ip1" id="ip1"/>.
 
-    <br><input type="number" name="IP" value="Endereço IP"><br>
+       <input type="number" size="3" maxlength="3" name="ip2"  id="ip2"/>.
 
-    Máscara de rede em contagem de bits:
+       <input type="number" size="3" maxlength="3" name="ip3"  id="ip3"/>.
 
-    <br><input type="number" name="Máscara" value="Máscara de rede "><br>
+       <input type="number" size="3" maxlength="3" name="ip4"  id="ip4"/>/
 
-    <br><input type="submit" value="Submit"></br>
+       <input type="number" size="3" maxlength="3" name="masc"  id="masc"/> <br />
 
-</div>
+       <input type="submit" value="Enviar"/>
+
+    </div>
 
 </body>
 </html>
+
