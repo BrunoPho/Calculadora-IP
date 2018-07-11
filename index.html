@@ -20,11 +20,10 @@
                         ip2: $("#ip2").val(),
                         ip3: $("#ip3").val(),
                         ip4: $("#ip4").val(),
-                        mansc: $("#masc").val();
+                        mansc: $("#masc").val()
                     }
-
                     ,function(data){ //data é o conteudo retornado do GET
-                    alert("Data: " + data);
+                      $("#resultado").html(dados);
                 });
             });
         });
@@ -49,6 +48,8 @@
        <input type="submit" value="Enviar"/>
 
     </div>
+
+<div id="resultado"></div>
 
 </body>
 </html>
