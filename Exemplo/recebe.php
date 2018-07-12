@@ -1,5 +1,6 @@
 <?php
 
+  //Função Soma
   function soma($a, $b){
   	$soma = $a + $b;
   	return $soma;
@@ -12,6 +13,7 @@
 
   echo "resultado ".$resultado;
 
+  //Função Divide
   function divide($c, $d){
       $divide = $c / $d;
       return $divide;
