@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: aluno
@@ -6,14 +7,57 @@
  * Time: 16:18
  */
 
-/*$_GET['$ip', '$masc'];
+$_GET['$ip1'];
 
- $ip   = $_GET['ip'];
- $masc = $_GET['masc'];*/
+$_GET['$ip2'];
+
+$_GET['$ip3'];
+
+$_GET['$ip4'];
+
+$_GET['$masc'];
+
+$ip   = $_GET['ip'];
+$masc = $_GET['masc'];
+
+function bits($masc){
+
+    $bits = 32 - $masc;
+
+    return $bits;
+
+    $x = $_GET['masc'];
+
+    $resultado = bits($x);
+
+}
+
+function enderecos($bits){
+
+}
+
+function subredes($enderecos){
+
+}
+
+function qual_subrede($ip4, $enderecos){
+
+}
+
+function prim_end($qual_subrede, $enderecos){
+
+}
+
+function prim_host($prim_end){
+
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
 
 
- $ip   = '192.168.0.1';
- $masc = '25';
+
+/*$ip   = '192.168.0.1';
+$masc = '25';*/
 
  $bits = 32 - $masc;
 
@@ -27,4 +71,6 @@
 
  $prim_host = $prim_end + 1;
 
- print_r($bits);
+ /*print_r($bits);*/
+
+

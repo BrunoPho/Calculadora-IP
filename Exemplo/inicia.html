@@ -15,7 +15,9 @@
               $.get("recebe.php",
               {
                 primeiro: $("#primeiro").val(),
-                segundo : $("#segundo").val()
+                segundo : $("#segundo") .val(),
+                terceiro: $("#terceiro").val(),
+                quarto  : $("#quarto")  .val()
               }
               	, function(dados){
               	$("#resultado").html(dados);
@@ -30,17 +32,21 @@
 
 	<center>
 
-	<h1> Calculadora IP </h1>
+	<h1> Soma e Divisão </h1>
 
    	<input type="number" id="primeiro" name="primeiro">
 
-   	<input type="number" id="segundo" name="segundo">
+   	<input type="number" id="segundo"  name="segundo">
+
+   	<input type="number" id="terceiro" name="terceiro">
+
+   	<input type="number" id="quarto"   name="quarto">
 
 	<button id="botao"> Enviar </button>
 
 	</center>
 
-	<div id="resultado"></div>
+    <div id="resultado">  </div>
 
 </body>
 </html>
