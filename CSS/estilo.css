@@ -1,8 +1,4 @@
-body{
-    height: 10px;
-    position: relative;
-}
-
 #div1{
     border-radius: 10px 20px;
+    background: #5630e2;
 }
